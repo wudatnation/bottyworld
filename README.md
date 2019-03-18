@@ -70,4 +70,8 @@ My _updated_ milestones for this project are as follows:
 ## Homework 9 / Answer to Question 4
 I also started learning how ncurses works, and also have been studying the way that elma_project works.  I can get the base elma_project to compile properly in the latest docker container made available by Prof. Klavins.  (At the time of this writing, the code in the above structure here compiles fine.)
 
+<<<<<<< HEAD
 At this point, I am still figuring out how to "convert" the given stopwatch example in elma_project to become the template for bottyworld.
+=======
+At this point, I am still figuring out how to "convert" the given stopwatch example in elma_project to become the template for bottyworld.
+>>>>>>> 8719b6a3c51d84c9474d4893872354e27db69523
