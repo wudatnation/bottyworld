@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Elma Project: README.md Source File</title>
+<title>bottyworld: README.md Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,9 +22,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Elma Project
+   <div id="projectname">bottyworld
    </div>
-   <div id="projectbrief">An event loop manager for embedded systems</div>
+   <div id="projectbrief">A 2D robot simulation that utilizes Elma</div>
   </td>
  </tr>
  </tbody>
@@ -83,61 +83,131 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">README.md</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;Example Elma Project</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;===</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;# bottyworld</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;_bottyworld_ is a 2D simulation of robot named &quot;botty&quot; that includes an intruder and a recharging battery. The creator is [David Wu](https://github.com/wudatnation), student in [ECEP520 (a.k.a. ECE590) - Software Engineering for Embedded Applications)](https://github.com/klavins/ECEP520), for which the professor is [Eric Klavins](https://github.com/klavins/).  This program was David&#39;s final project for this course.</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;[Elma](http://klavinslab.org/elma) is an event loop manager designed to teach embedded and reactive systems programming. This repository contains an example Elma project, showing how to use many Elma features, as well as illustrating how to arrange the files and directories in an Elma project.</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;NOTE:  Be sure that your computer&#39;s sound is operational, and that the volume is turned up to a medium volume.</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;The source code for this project is available [on github](https://github.com/klavinslab/elma_project).</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;Installation</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;---</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    git clone https://github.com/klavinslab/elma_project.git</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    cd elma_project</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    docker run -v $PWD:/source -it klavins/elma:latest bash</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    make</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    make docs</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;Execution</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;---</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;To run the stopwatch, type</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    bin/stopwatch</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;The stopwatch is controlled via the keyboard, via these keys:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;- **s**: Start or stop</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;- **l**: Lap</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;- **r**: Reset</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;- **q**: Quit</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;Execution</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;---</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;To run _bottyworld_, type</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    bin/bottyworld</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;Operation</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;---</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;When the _bottyworld_ environment appears, botty is represented by &quot;b&quot;.  As he moves rather quickly in random directions throughout his world, his battery power dissipates.</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;You can influence the environment of _bottyworld_ via these keys:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;- **i**: Introduce Intruder</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  * The Intruder appears, represented by &quot;I&quot;.  When this happens, botty makes a noise to indicate that he is indeed aware of the Intruder.</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  * If botty moves to within the proximity of the Intruder, botty will turn into an &quot;E&quot; and purposely evade the Intruder.</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;- **r**: Reset</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  * If you reset while botty is in an evasive &quot;E&quot; mode, botty will turn back into &quot;b&quot;, but botty will make a noise indicating that he knows the intruder is still there.</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  * If you reset while botty is in his regular &quot;b&quot; mode, the Intruder will disappear!</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  * NOTE:  Resetting does NOT affect the battery&#39;s power and recharging operation.</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;- **q**: Quit</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;Architecture</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;---</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;This project was intended to be an extension of the robot finite state machine, introduced to our class in Week 7 homework.  The elma_project file structure, provided by Prof. Klavins, was used as the baseline for the project. The latest &quot;elma:latest&quot; docker container for compiling.</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;Testing</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;---</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;To run tests, do</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;```bash</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;bin/test</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;```</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;Architecture</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;---</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;Describe how your project was designed, what choices you made, how things are organized, etc.</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;Results</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;---</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;Describe the results of testing and running your code. Include visuals when possible.</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;Acknowledgements</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;---</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;Mention anyone who helped you and how.</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;References</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;---</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;List all libraries, articles, stack overflow answers, etc. that you used to get your code working.</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;Using ncurses for the first time, I spent a lot of time learning how this application works, and I also spent a few days learning how the base elma_project handled states and transitions.  A considerable amount of time and effort was spent figuring out how to convert the Homework 7 representation of the FSM, and convert it into the elma_project-style structure.</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;Results</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;---</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;Part of the challenge of this project was the intepretation of the robot FSM, and how it can be represented in a user interface.  I was able to get the Wander, Make Noise, and Evade states operating correctly, as well as the transitions between each.</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;I diverged from the original FSM to create a method of battery operation that was slightly more efficient (and aesthetically pleasing) than what I would have had to implement using the original structure.</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;I found that I worked best when I focused on getting a particular feature to work, as opposed to working on multiple integrated features at once.  I made sure to save, for configuration management, the various successful stages of coding.</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;Acknowledgements</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;---</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;No one helped me with this project.</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;References</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;---</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;I used the following websites for reference:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;* [cplusplus.com](http://clusplus.com)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;* [NCURSES Programming HOWTO](http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;________________________________________</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;# Historical Sections from Week 8 &amp; 9 Homework</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;## Motivation</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;ECE590 has been a challenging but also very rewarding course, and I (David Wu) hope to showcase what I have learned these past 10 weeks in this final project.  For whatever reason, the idea of moving the FSM robot (part of homework from Week 7) into a 2D environment is the project option that caught my attention.</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;## Disclaimer</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;Please take note that the goals and other details listed below are subject to change/evolve as the project matures.</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;## Goals</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;My goals for _bottyworld_ are as follows:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;* Successfully simulate Botty in a 2D environment, in which Botty wanders in random directions per second.</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;* Include an intruder that Botty will respond to.</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;* Include a recharge station that will bring Botty back up to full power.</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;* Allow an external operator to reset the environment.</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;* Export visual data per second.</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;## Projected Resources</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;I project that I will use the following resources:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;* Elma</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;* robot FSM code determined in Week 7 homework</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;* StateMachine class (C++)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;* chrono sub-namespace</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;* [Google.com](http://google.com), to search for solutions to coding problems as they arise</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;* Input from other students - not to &quot;copy&quot; ideas but to gain some insight in terms of approach, as they also work on their final projects.</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;## Homework 9 / Answer to Question 3</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;This past week, I have been brainstorming on how I will approach the 2-dimensional space that Botty will wander in, as well as reviewing the elma_project files and structure.</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;I project that I will be creating a 10 x 10 grid that looks similar to the following:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;=  =  =  =  =  =  =  =  =  =</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;=  =  =  =  =  =  =  =  =  =</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;=  B  =  =  =  =  =  =  =  =</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;=  =  =  =  =  =  =  =  =  =</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;=  =  =  =  =  =  =  =  =  =</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;=  =  =  =  =  =  =  =  =  =</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;=  =  =  =  =  =  I  =  =  =</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;=  =  =  =  =  =  =  =  =  =</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;=  =  =  =  =  =  =  =  =  =</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;=  =  =  =  =  =  =  =  =  ^</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;Here is an explanation of the characters in the grid.  Note that these might be replaced by other characters depending on the capability of ncurses:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;* **B** of course is Botty himself.  Botty will start at the upper-right corner (0,0) and then will wander through the grid in a random direction each second.</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;* **I** is the intruder.  When Botty gets close to the introder, he will go into the &quot;evade&quot; state.</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;* **^** is the recharge station.  When Botty gets close to losing battery power, he will move towards the recharge station to get re-energized.  Also, if Botty wanders into the recharge station, it will recharge.  I still haven&#39;t decided if Botty will keep on &quot;going and going&quot;, or if he will die if it doesn&#39;t reach the recharge station in time.</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;My _updated_ milestones for this project are as follows:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;* Compile elma_project (base template for bottyworld structure).  _Complete_</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;* Study ncurses. _In Progress_ (ECD: Mon., 3/18)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;* Set up the 2D grid. (ECD: Tue., 3/19)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;* Enable Botty to wander in random directions per second. (ECD: Tue., 3/19)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;* Place intruder and recharge station in environment. (ECD: Tue., 3/19)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;* Complete 2D graphical representation/export of data per second.  (ECD: Wed., 3/20)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;* Successfully implement all states of FSM. (ECD: Wed., 3/20)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;* Complete API documentation.  (ECD: Thurs., 3/21)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;* Complete/submit final project. (ECD: Fri., 3/22)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;## Homework 9 / Answer to Question 4</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;I also started learning how ncurses works, and also have been studying the way that elma_project works.  I can get the base elma_project to compile properly in the latest docker container made available by Prof. Klavins.  (At the time of this writing, the code in the above structure here compiles fine.)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;At this point, I am still figuring out how to &quot;convert&quot; the given stopwatch example in elma_project to become the template for bottyworld.</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 17 2019 14:45:49 for My Elma Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 24 2019 06:52:16 for bottyworld by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

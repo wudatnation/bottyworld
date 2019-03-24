@@ -3,15 +3,15 @@
 #include <string>
 #include <chrono>
 #include "gtest/gtest.h"
-#include "stopwatch.h"
+#include "bottyworld.h"
 
 namespace {
  
     using namespace elma;
-    using namespace stopwatch;
+    using namespace bottyworld;
 
-    TEST(StopWatch,Construction) { 
-        StopWatch sw; 
+    TEST(BottyWorld,Construction) { 
+        BottyWorld sw; 
         ASSERT_EQ("off", sw.current().name());
     }
 

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Elma Project: Main Page</title>
+<title>bottyworld: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,9 +22,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Elma Project
+   <div id="projectname">bottyworld
    </div>
-   <div id="projectbrief">An event loop manager for embedded systems</div>
+   <div id="projectbrief">A 2D robot simulation that utilizes Elma</div>
   </td>
  </tr>
  </tbody>
@@ -75,39 +75,102 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">My Elma Project Documentation</div>  </div>
+<div class="title">bottyworld Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="http://klavinslab.org/elma">Elma</a> is an event loop manager designed to teach embedded and reactive systems programming. This repository contains an example Elma project, showing how to use many Elma features, as well as illustrating how to arrange the files and directories in an Elma project.</p>
-<p>The source code for this project is available <a href="https://github.com/klavinslab/elma_project">on github</a>.</p>
-<h2>Installation </h2>
-<pre class="fragment">git clone https://github.com/klavinslab/elma_project.git
-cd elma_project
-docker run -v $PWD:/source -it klavins/elma:latest bash
-make
-make docs
-</pre><h2>Execution </h2>
-<p>To run the stopwatch, type </p><pre class="fragment">bin/stopwatch
-</pre><p>The stopwatch is controlled via the keyboard, via these keys:</p><ul>
-<li><b>s</b>: Start or stop</li>
-<li><b>l</b>: Lap</li>
-<li><b>r</b>: Reset</li>
+<div class="textblock"><p><em>bottyworld</em> is a 2D simulation of robot named "botty" that includes an intruder and a recharging battery. The creator is <a href="https://github.com/wudatnation">David Wu</a>, student in <a href="https://github.com/klavins/ECEP520">ECEP520 (a.k.a. ECE590) - Software Engineering for Embedded Applications)</a>, for which the professor is <a href="https://github.com/klavins/">Eric Klavins</a>. This program was David's final project for this course.</p>
+<p>NOTE: Be sure that your computer's sound is operational, and that the volume is turned up to a medium volume.</p>
+<h2>Execution </h2>
+<p>To run <em>bottyworld</em>, type </p><pre class="fragment">bin/bottyworld
+</pre><h2>Operation </h2>
+<p>When the <em>bottyworld</em> environment appears, botty is represented by "b". As he moves rather quickly in random directions throughout his world, his battery power dissipates.</p>
+<p>You can influence the environment of <em>bottyworld</em> via these keys:</p><ul>
+<li><b>i</b>: Introduce Intruder<ul>
+<li>The Intruder appears, represented by "I". When this happens, botty makes a noise to indicate that he is indeed aware of the Intruder.</li>
+<li>If botty moves to within the proximity of the Intruder, botty will turn into an "E" and purposely evade the Intruder.</li>
+</ul>
+</li>
+<li><b>r</b>: Reset<ul>
+<li>If you reset while botty is in an evasive "E" mode, botty will turn back into "b", but botty will make a noise indicating that he knows the intruder is still there.</li>
+<li>If you reset while botty is in his regular "b" mode, the Intruder will disappear!</li>
+<li>NOTE: Resetting does NOT affect the battery's power and recharging operation.</li>
+</ul>
+</li>
 <li><b>q</b>: Quit</li>
 </ul>
-<h2>Testing </h2>
-<p>To run tests, do ```bash bin/test ```</p>
 <h2>Architecture </h2>
-<p>Describe how your project was designed, what choices you made, how things are organized, etc.</p>
+<p>This project was intended to be an extension of the robot finite state machine, introduced to our class in Week 7 homework. The elma_project file structure, provided by Prof. Klavins, was used as the baseline for the project. The latest "elma:latest" docker container for compiling.</p>
+<p>Using ncurses for the first time, I spent a lot of time learning how this application works, and I also spent a few days learning how the base elma_project handled states and transitions. A considerable amount of time and effort was spent figuring out how to convert the Homework 7 representation of the FSM, and convert it into the elma_project-style structure.</p>
 <h2>Results </h2>
-<p>Describe the results of testing and running your code. Include visuals when possible.</p>
+<p>Part of the challenge of this project was the intepretation of the robot FSM, and how it can be represented in a user interface. I was able to get the Wander, Make Noise, and Evade states operating correctly, as well as the transitions between each.</p>
+<p>I diverged from the original FSM to create a method of battery operation that was slightly more efficient (and aesthetically pleasing) than what I would have had to implement using the original structure.</p>
+<p>I found that I worked best when I focused on getting a particular feature to work, as opposed to working on multiple integrated features at once. I made sure to save, for configuration management, the various successful stages of coding.</p>
 <h2>Acknowledgements </h2>
-<p>Mention anyone who helped you and how.</p>
+<p>No one helped me with this project.</p>
 <h2>References </h2>
-<p>List all libraries, articles, stack overflow answers, etc. that you used to get your code working. </p>
+<p>I used the following websites for reference:</p><ul>
+<li><a href="http://clusplus.com">cplusplus.com</a></li>
+<li><a href="http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/">NCURSES Programming HOWTO</a></li>
+</ul>
+<hr/>
+<h1>Historical Sections from Week 8 &amp; 9 Homework</h1>
+<h2>Motivation</h2>
+<p>ECE590 has been a challenging but also very rewarding course, and I (David Wu) hope to showcase what I have learned these past 10 weeks in this final project. For whatever reason, the idea of moving the FSM robot (part of homework from Week 7) into a 2D environment is the project option that caught my attention.</p>
+<h2>Disclaimer</h2>
+<p>Please take note that the goals and other details listed below are subject to change/evolve as the project matures.</p>
+<h2>Goals</h2>
+<p>My goals for <em>bottyworld</em> are as follows:</p><ul>
+<li>Successfully simulate Botty in a 2D environment, in which Botty wanders in random directions per second.</li>
+<li>Include an intruder that Botty will respond to.</li>
+<li>Include a recharge station that will bring Botty back up to full power.</li>
+<li>Allow an external operator to reset the environment.</li>
+<li>Export visual data per second.</li>
+</ul>
+<h2>Projected Resources</h2>
+<p>I project that I will use the following resources:</p><ul>
+<li>Elma</li>
+<li>robot FSM code determined in Week 7 homework</li>
+<li>StateMachine class (C++)</li>
+<li>chrono sub-namespace</li>
+<li><a href="http://google.com">Google.com</a>, to search for solutions to coding problems as they arise</li>
+<li>Input from other students - not to "copy" ideas but to gain some insight in terms of approach, as they also work on their final projects.</li>
+</ul>
+<h2>Homework 9 / Answer to Question 3</h2>
+<p>This past week, I have been brainstorming on how I will approach the 2-dimensional space that Botty will wander in, as well as reviewing the elma_project files and structure.</p>
+<p>I project that I will be creating a 10 x 10 grid that looks similar to the following:</p>
+<p>= = = = = = = = = =</p>
+<p>= = = = = = = = = =</p>
+<p>= B = = = = = = = =</p>
+<p>= = = = = = = = = =</p>
+<p>= = = = = = = = = =</p>
+<p>= = = = = = = = = =</p>
+<p>= = = = = = I = = =</p>
+<p>= = = = = = = = = =</p>
+<p>= = = = = = = = = =</p>
+<p>= = = = = = = = = ^</p>
+<p>Here is an explanation of the characters in the grid. Note that these might be replaced by other characters depending on the capability of ncurses:</p><ul>
+<li><b>B</b> of course is Botty himself. Botty will start at the upper-right corner (0,0) and then will wander through the grid in a random direction each second.</li>
+<li><b>I</b> is the intruder. When Botty gets close to the introder, he will go into the "evade" state.</li>
+<li>**^** is the recharge station. When Botty gets close to losing battery power, he will move towards the recharge station to get re-energized. Also, if Botty wanders into the recharge station, it will recharge. I still haven't decided if Botty will keep on "going and going", or if he will die if it doesn't reach the recharge station in time.</li>
+</ul>
+<p>My <em>updated</em> milestones for this project are as follows:</p><ul>
+<li>Compile elma_project (base template for bottyworld structure). <em>Complete</em></li>
+<li>Study ncurses. <em>In Progress</em> (ECD: Mon., 3/18)</li>
+<li>Set up the 2D grid. (ECD: Tue., 3/19)</li>
+<li>Enable Botty to wander in random directions per second. (ECD: Tue., 3/19)</li>
+<li>Place intruder and recharge station in environment. (ECD: Tue., 3/19)</li>
+<li>Complete 2D graphical representation/export of data per second. (ECD: Wed., 3/20)</li>
+<li>Successfully implement all states of FSM. (ECD: Wed., 3/20)</li>
+<li>Complete API documentation. (ECD: Thurs., 3/21)</li>
+<li>Complete/submit final project. (ECD: Fri., 3/22)</li>
+</ul>
+<h2>Homework 9 / Answer to Question 4</h2>
+<p>I also started learning how ncurses works, and also have been studying the way that elma_project works. I can get the base elma_project to compile properly in the latest docker container made available by Prof. Klavins. (At the time of this writing, the code in the above structure here compiles fine.)</p>
+<p>At this point, I am still figuring out how to "convert" the given stopwatch example in elma_project to become the template for bottyworld. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 17 2019 14:45:50 for My Elma Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 24 2019 06:52:18 for bottyworld by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

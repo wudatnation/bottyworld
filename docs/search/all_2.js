@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['lap',['lap',['../classstopwatch_1_1StopWatch.html#a8e25f50201831578ad0b588a4ce16504',1,'stopwatch::StopWatch']]],
-  ['laps',['laps',['../classstopwatch_1_1StopWatch.html#a8b335f9667cd518297ca3be4e57c4972',1,'stopwatch::StopWatch']]]
+  ['intruder',['intruder',['../classbottyworld_1_1BottyWorld.html#a01c92f7357c1affd3cd1c239863ccd0b',1,'bottyworld::BottyWorld']]],
+  ['intruder_5foff',['intruder_off',['../classbottyworld_1_1BottyWorld.html#a885fe3c21dce875374dacbf71593b25a',1,'bottyworld::BottyWorld']]],
+  ['intruder_5fon',['intruder_on',['../classbottyworld_1_1BottyWorld.html#a792d41e9c9cc7e43b108f66a49f2ffa4',1,'bottyworld::BottyWorld']]]
 ];

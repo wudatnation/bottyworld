@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['reset',['reset',['../classstopwatch_1_1StopWatch.html#a1c0dcc57c615559f24bc9f8759271a9d',1,'stopwatch::StopWatch']]]
+  ['makenoisestate',['MakenoiseState',['../classbottyworld_1_1MakenoiseState.html',1,'bottyworld']]],
+  ['makenoisestate',['MakenoiseState',['../classbottyworld_1_1MakenoiseState.html#a5200032e99291fc73ecd3142fbfce2ba',1,'bottyworld::MakenoiseState']]]
 ];
